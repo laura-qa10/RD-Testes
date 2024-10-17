@@ -92,8 +92,8 @@ Realizar uma compra
     Click Element    ${compra.btnSelecaoEntrega}
     Sleep  7
     Click Button    ${compra.btnContinuarPagamento}
-    Sleep  10
+    Sleep  11
     Click Element    ${pagamento.btnPix}
-    Sleep    5
+    Sleep    6
     Click Button    ${compra.btnConfirmarPedido}
     Wait Until Element Is Visible    //*[@id="__next"]/main/div/div/div/div[1]/div/div[1]/h2    20
