@@ -94,6 +94,6 @@ Realizar uma compra
     Click Button    ${compra.btnContinuarPagamento}
     Sleep  11
     Click Element    ${pagamento.btnPix}
-    Sleep    6
+    Sleep    5
     Click Button    ${compra.btnConfirmarPedido}
     Wait Until Element Is Visible    //*[@id="__next"]/main/div/div/div/div[1]/div/div[1]/h2    20
