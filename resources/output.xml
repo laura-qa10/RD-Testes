@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-06-06T20:06:16.579531" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/home/laura/robot/ProjetoQaCoders/RD/tests">
+<suite id="s1-s1" name="Login" source="/home/laura/robot/ProjetoQaCoders/RD/tests/login.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-06-06T20:06:16.807082" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-06T20:06:16.806843" elapsed="0.460662"/>
+</kw>
+<test id="s1-s1-t1" name="01 - Login com sucesso" line="13">
+<kw name="Realizar login com sucesso" owner="rd">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-06-06T20:06:17.268686" level="INFO">Opening url 'https://raiaextstg.b2clogin.com/raiaextstg.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1A_Signin&amp;client_id=4b96d263-6ef5-477f-8f8b-2012fa3e5764&amp;nonce=defaultNonce&amp;redirect_uri=https%3A%2F%2Fbeta.stage2.drogaraia.com.br%2Fapi%2Fnext%2Fcallback-login&amp;scope=openid+4b96d263-6ef5-477f-8f8b-2012fa3e5764&amp;response_type=code+token&amp;prompt=login&amp;channel=site&amp;version=latest&amp;response_mode=query&amp;loginSocialEnable=true'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-06-06T20:06:17.268545" elapsed="1.081799"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-06T20:06:18.350648" elapsed="0.012088"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${logarSiteRaia.lblLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-06T20:06:18.362943" elapsed="0.843860"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-06T20:06:19.207936" level="INFO">Typing text '55424389031' into text field '//*[@id="signInName"]'.</msg>
+<arg>${logarSiteRaia.campoCPF}</arg>
+<arg>${dadosLogin.campoCPF}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T20:06:19.207044" elapsed="0.065734"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-06T20:06:19.273645" level="INFO">Typing text '123456' into text field '//*[@id="password"]'.</msg>
+<arg>${logarSiteRaia.campoSenha}</arg>
+<arg>${dadosLogin.campoSenha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T20:06:19.272971" elapsed="0.040023"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-06T20:06:23.313447" level="INFO">Slept 4 seconds.</msg>
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-06T20:06:19.313185" elapsed="4.000392"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-06T20:06:23.314220" level="INFO">Clicking element '//*[@id="next"]'.</msg>
+<arg>${logarSiteRaia.btnEntrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-06T20:06:23.313759" elapsed="0.027686"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-06-06T20:06:43.342003" level="INFO">Slept 20 seconds.</msg>
+<arg>20</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-06-06T20:06:23.341682" elapsed="20.000523"/>
+</kw>
+<status status="PASS" start="2024-06-06T20:06:17.268260" elapsed="26.074149"/>
+</kw>
+<status status="PASS" start="2024-06-06T20:06:17.267706" elapsed="26.075115"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-06T20:06:43.343968" elapsed="0.063273"/>
+</kw>
+<status status="PASS" start="2024-06-06T20:06:16.592693" elapsed="26.814651"/>
+</suite>
+<status status="PASS" start="2024-06-06T20:06:16.580236" elapsed="26.827668"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Login">Tests.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

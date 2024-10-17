@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.10.12 on linux)" generated="2024-10-17T16:38:17.872398" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="/home/lamcgomes/Documentos/robot/ProjetoQaCoders/RD/tests/login.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2024-10-17T16:38:18.079605" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-17T16:38:18.078833" elapsed="0.530162"/>
+</kw>
+<test id="s1-t1" name="01-Abrir a home e acessar o login" line="13">
+<kw name="Abrir a home do site Raia" owner="rd">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:38:18.610662" level="INFO">Opening url 'https://beta.stage2.drogaraia.com.br/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-10-17T16:38:18.610406" elapsed="41.044747"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-17T16:38:59.655586" elapsed="0.008538"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="onetrust-accept-btn-handler"]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-17T16:38:59.664538" elapsed="0.025175"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:38:59.690602" level="INFO">Clicking element '//*[@id="onetrust-accept-btn-handler"]'.</msg>
+<arg>${home.btnAceitaCookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T16:38:59.690023" elapsed="0.108084"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-17T16:39:04.800031" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-17T16:38:59.798798" elapsed="5.001510"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="fixed-container-styles"]/header/div/div[3]/div/div[2]/span</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-17T16:39:04.800586" elapsed="0.021467"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:39:04.822801" level="INFO">Simulating Mouse Over on element '//*[@id="fixed-container-styles"]/header/div/div[3]/div/div[2]/span'.</msg>
+<arg>//*[@id="fixed-container-styles"]/header/div/div[3]/div/div[2]/span</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-10-17T16:39:04.822496" elapsed="0.281341"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.btnLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-17T16:39:05.104122" elapsed="0.015388"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:39:05.120306" level="INFO">Clicking element '//*[@id="fixed-container-styles"]/header/div/div[3]/div[2]/button'.</msg>
+<arg>${home.btnLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T16:39:05.119777" elapsed="0.229720"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-17T16:39:15.350410" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-17T16:39:05.349924" elapsed="10.000806"/>
+</kw>
+<status status="PASS" start="2024-10-17T16:38:18.610014" elapsed="56.740863"/>
+</kw>
+<kw name="Realizar login com sucesso" owner="rd">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${logarSiteRaia.lblLogin}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-17T16:39:15.351740" elapsed="0.016208"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:39:15.368953" level="INFO">Typing text '113.805.550-60' into text field '//*[@id="signInName"]'.</msg>
+<arg>${logarSiteRaia.campoCPF}</arg>
+<arg>${dadosLogin.campoCPF}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T16:39:15.368225" elapsed="0.119450"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:39:15.488701" level="INFO">Typing text '123456' into text field '//*[@id="password"]'.</msg>
+<arg>${logarSiteRaia.campoSenha}</arg>
+<arg>${dadosLogin.campoSenha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T16:39:15.487951" elapsed="0.077988"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-17T16:39:19.566570" level="INFO">Slept 4 seconds.</msg>
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-17T16:39:15.566228" elapsed="4.000602"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:39:19.567580" level="INFO">Clicking element '//*[@id="next"]'.</msg>
+<arg>${logarSiteRaia.btnEntrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T16:39:19.567047" elapsed="0.034989"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-17T16:39:34.602855" level="INFO">Slept 15 seconds.</msg>
+<arg>15</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-17T16:39:19.602413" elapsed="15.001585"/>
+</kw>
+<status status="PASS" start="2024-10-17T16:39:15.351368" elapsed="19.253498"/>
+</kw>
+<kw name="Realizar uma compra" owner="rd">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:39:34.609177" level="INFO">Typing text '49621' into text field '//*[@id="searchHeader"]'.</msg>
+<arg>${compra.campoBusca}</arg>
+<arg>${compra.inserirBusca}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T16:39:34.607168" elapsed="0.166608"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-17T16:39:42.774598" level="INFO">Slept 8 seconds.</msg>
+<arg>8</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-17T16:39:34.774174" elapsed="8.000712"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:39:42.775735" level="INFO">Clicking element '//*[@id="fixed-container-styles"]/header/div/div[1]/form/button[2]'.</msg>
+<arg>${compra.btnBuscarProduto}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T16:39:42.775136" elapsed="0.170930"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="__next"]/main/div[2]/div/div/h1</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-17T16:39:42.946846" elapsed="1.589978"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-17T16:39:54.537424" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-17T16:39:44.537097" elapsed="10.000584"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:39:54.538175" level="INFO">Simulating Mouse Over on element '//*[@id="__next"]/main/div[3]/div/div[2]/div[3]/div[2]/div[1]/a/div/img'.</msg>
+<arg>//*[@id="__next"]/main/div[3]/div/div[2]/div[3]/div[2]/div[1]/a/div/img</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-10-17T16:39:54.537893" elapsed="0.276803"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${compra.btnComprar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-17T16:39:54.815300" elapsed="0.021444"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:39:54.840243" level="INFO">Clicking button '//*[@id="__next"]/main/div[3]/div/div[2]/div[3]/div[2]/div[5]/div[2]/button'.</msg>
+<arg>${compra.btnComprar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T16:39:54.837948" elapsed="0.104815"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-17T16:40:04.944045" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-17T16:39:54.943303" elapsed="10.001015"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:40:04.945181" level="INFO">Clicking element '//*[@id="fixed-container-styles"]/header/div/div[4]/div[1]/a'.</msg>
+<arg>${compra.btnCesta}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T16:40:04.944561" elapsed="0.177356"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-17T16:40:15.124503" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-17T16:40:05.123184" elapsed="10.002299"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${compra.btnFinalizar}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-10-17T16:40:15.126428" elapsed="0.281980"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-17T16:40:25.410375" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-17T16:40:15.409169" elapsed="10.001710"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:40:25.413640" level="INFO">Clicking button '//*[@id="__next"]/main/div[1]/div[4]/button[2]'.</msg>
+<arg>${compra.btnFinalizar}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T16:40:25.411952" elapsed="0.194105"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-17T16:40:30.607608" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-17T16:40:25.606526" elapsed="5.003264"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="__next"]/main/div/div[3]/div/div[1]/div/div/div/div[2]/div/div/div/div[2]/div/p</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-17T16:40:30.611613" elapsed="2.240620"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-17T16:40:42.853105" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-17T16:40:32.852593" elapsed="10.000766"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:40:42.854132" level="INFO">Clicking element '//*[@id="delivery-22"]'.</msg>
+<arg>${compra.btnSelecaoEntrega}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T16:40:42.853569" elapsed="0.100657"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-17T16:40:49.956149" level="INFO">Slept 7 seconds.</msg>
+<arg>7</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-17T16:40:42.955147" elapsed="7.001506"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:40:49.957921" level="INFO">Clicking button '//*[@id="__next"]/main/div/div[3]/div/div[2]/div[1]/div[3]/button'.</msg>
+<arg>${compra.btnContinuarPagamento}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T16:40:49.956913" elapsed="0.134087"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-17T16:41:00.091780" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-17T16:40:50.091388" elapsed="10.000671"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:41:00.092896" level="INFO">Clicking element '//*[@id="__next"]/main/div/div[3]/div/div[1]/div/div/div/div[4]/div[1]/div/div[3]'.</msg>
+<arg>${pagamento.btnPix}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T16:41:00.092315" elapsed="0.068056"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-17T16:41:05.161061" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-17T16:41:00.160670" elapsed="5.000659"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-17T16:41:05.162199" level="INFO">Clicking button '//*[@id="__next"]/main/div/div[3]/div/div[2]/div[1]/div[3]/button[1]'.</msg>
+<arg>${compra.btnConfirmarPedido}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-17T16:41:05.161573" elapsed="0.088008"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="__next"]/main/div/div/div/div[1]/div/div[1]/h2</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-17T16:41:05.250584" elapsed="9.932683"/>
+</kw>
+<status status="PASS" start="2024-10-17T16:39:34.606276" elapsed="100.577212"/>
+</kw>
+<status status="PASS" start="2024-10-17T16:38:18.609323" elapsed="176.574495"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-17T16:41:15.184806" elapsed="0.114721"/>
+</kw>
+<status status="PASS" start="2024-10-17T16:38:17.876396" elapsed="177.423314"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-17T16:38:18.062783" level="ERROR">Error in file '/home/lamcgomes/Documentos/robot/ProjetoQaCoders/RD/tests/login.robot' on line 4: Importing library 'FakerLibrary' failed: ModuleNotFoundError: No module named 'FakerLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/lamcgomes/.vscode/extensions/robocorp.robotframework-lsp-1.13.0/src/robotframework_debug_adapter
+  /home/lamcgomes/Documentos/robot/ProjetoQaCoders/RD
+  /home/lamcgomes/.vscode/extensions/robocorp.robotframework-lsp-1.13.0/src
+  /home/lamcgomes/.vscode/extensions/robocorp.robotframework-lsp-1.13.0/src/robotframework_ls/vendored
+  /usr/lib/python310.zip
+  /usr/lib/python3.10
+  /usr/lib/python3.10/lib-dynload
+  /home/lamcgomes/.local/lib/python3.10/site-packages
+  /usr/local/lib/python3.10/dist-packages
+  /usr/lib/python3/dist-packages</msg>
+</errors>
+</robot>
