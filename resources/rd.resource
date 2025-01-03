@@ -13,7 +13,7 @@ ${URL}          https://beta.stage2.drogaraia.com.br/
 &{home}
 
 ...    btnAceitaCookies=//*[@id="onetrust-accept-btn-handler"]
-...    btnLogin=//*[@id="fixed-container-styles"]/header/div/div[3]/div[2]/button
+...    btnLogin=//*[@id="side-sheet-desktop"]/div/div[2]/div/div[2]/a[1]
 
 
 &{compra}
@@ -53,9 +53,9 @@ Abrir a home do site Raia
     Maximize Browser Window
     Wait Until Element Is Visible    //*[@id="onetrust-accept-btn-handler"]    10
     Click Element    ${home.btnAceitaCookies}
-    Sleep    5
-    Wait Until Element Is Visible    //*[@id="fixed-container-styles"]/header/div/div[3]/div/div[2]/span
-    Mouse Over    //*[@id="fixed-container-styles"]/header/div/div[3]/div/div[2]/span
+    Sleep    10
+    Wait Until Element Is Visible    //*[@id="__next"]/div/section/div[1]/header/div/div[2]/button/div/span[2]
+    Click Element    //*[@id="__next"]/div/section/div[1]/header/div/div[2]/button/div/span[2]
     Wait Until Element Is Visible    ${home.btnLogin}    10    
     Click Element    ${home.btnLogin}
     Sleep    10
